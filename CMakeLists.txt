@@ -57,6 +57,9 @@ endif()
 include_directories(core/src)
 add_library(libzxing ${LIBZXING_FILES})
 set_target_properties(libzxing PROPERTIES PREFIX "")
+set_target_properties(libzxing PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+
 
 find_package(Iconv)
 if(ICONV_FOUND)
