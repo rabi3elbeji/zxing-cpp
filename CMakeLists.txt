@@ -56,6 +56,7 @@ endif()
 
 include_directories(core/src)
 add_library(libzxing ${LIBZXING_FILES})
+target_link_libraries(libzxing ${OpenCV_LIBRARIES})
 set_target_properties(libzxing PROPERTIES PREFIX "")
 set_target_properties(libzxing PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
